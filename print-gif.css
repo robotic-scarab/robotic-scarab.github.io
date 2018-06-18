@@ -1,0 +1,44 @@
+body {
+	min-height: 100vh;
+	min-width: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+		". . ."
+		". center ."
+		". . .";
+	justify-items: center;
+}
+
+.large {
+	grid-area: center;
+	margin: 0;
+	z-index: 10;
+}
+
+.medium {
+	grid-area: center;
+	margin: 0;
+	opacity: 0;
+	z-index: 5;
+}
+
+/*
+@media only screen and (max-width: 1300px){
+	.large {
+		opacity: 0;
+	}
+
+	.medium {
+		opacity: 1;
+	}
+}*/
